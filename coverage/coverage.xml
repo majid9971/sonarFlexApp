@@ -1,0 +1,17 @@
+# Create a minimal coverage.xml
+cat <<EOF > coverage/coverage.xml
+<?xml version="1.0"?>
+<coverage line-rate="1.0" branch-rate="1.0" version="4.0" timestamp="0">
+  <packages>
+    <package name="com.app">
+      <classes>
+        <class name="Calculator" filename="src/com/app/Calculator.as" line-rate="1.0" branch-rate="1.0">
+          <lines>
+            <line number="1" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
+EOF
