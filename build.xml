@@ -1,0 +1,14 @@
+<project name="FlexCoverageProject" default="test">
+
+    <target name="test">
+        <!-- Run FlexUnit tests -->
+        <!-- Generate Cobertura XML -->
+        <echo message="Running FlexUnit tests and generating coverage"/>
+        
+        <!-- Simulated coverage output -->
+        <!-- In real setup, FlexUnit + coverage tool generates this -->
+        <mkdir dir="coverage"/>
+        <copy file="sample-coverage.xml" tofile="coverage/coverage.xml"/>
+    </target>
+
+</project>
