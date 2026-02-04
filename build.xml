@@ -6,8 +6,7 @@
         <mkdir dir="coverage"/>
 
         <!-- Minimal fake coverage for Sonar -->
-        <echo file="coverage/coverage.xml">
-<?xml version="1.0"?>
+        <echo file="coverage/coverage.xml"><![CDATA[
 <coverage line-rate="1.0" branch-rate="1.0" version="4.0" timestamp="0">
   <packages>
     <package name="com.app">
@@ -21,7 +20,7 @@
     </package>
   </packages>
 </coverage>
-        </echo>
+        ]]></echo>
     </target>
 
 </project>

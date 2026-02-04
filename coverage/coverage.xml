@@ -1,6 +1,4 @@
-# Create a minimal coverage.xml
-cat <<EOF > coverage/coverage.xml
-<?xml version="1.0"?>
+
 <coverage line-rate="1.0" branch-rate="1.0" version="4.0" timestamp="0">
   <packages>
     <package name="com.app">
@@ -14,4 +12,4 @@ cat <<EOF > coverage/coverage.xml
     </package>
   </packages>
 </coverage>
-EOF
+        
