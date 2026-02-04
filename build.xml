@@ -1,14 +1,18 @@
 <project name="FlexCoverageProject" default="test">
+    <property name="FLEX_HOME" value="/opt/flex"/>
+    <property name="src.dir" value="src"/>
+    <property name="test.dir" value="test"/>
+    <property name="reports.dir" value="coverage"/>
+
+    <mkdir dir="${reports.dir}"/>
+
+    <taskdef resource="flexTasks.tasks"
+             classpath="${FLEX_HOME}/ant/lib/flexTasks.jar"/>
 
     <target name="test">
-        <!-- Run FlexUnit tests -->
-        <!-- Generate Cobertura XML -->
-        <echo message="Running FlexUnit tests and generating coverage"/>
-        
-        <!-- Simulated coverage output -->
-        <!-- In real setup, FlexUnit + coverage tool generates this -->
-        <mkdir dir="coverage"/>
-        <copy file="sample-coverage.xml" tofile="coverage/coverage.xml"/>
+        <flexunit workingDir="${basedir}" toDir="${reports.dir}" haltonfailure="true" verbose="true">
+            <source dir="${test.dir}"/>
+            <coverage enabled="true"/>
+        </flexunit>
     </target>
-
 </project>
